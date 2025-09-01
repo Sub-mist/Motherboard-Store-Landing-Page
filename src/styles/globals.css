@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --scrollbar-track: #FFF085;
+  --scrollbar-thumb: #F9CB43;
+  --scrollbar-thumb-hover: #F9CB43;
+}
+
+html.dark {
+  --scrollbar-track: #1e293b;
+  --scrollbar-thumb: #334155;
+  --scrollbar-thumb-hover: #475569;
+}
+
+
+@layer base {
+  :root {
+    --brand: #FFF085;
+    --brand-secondary:#F9CB43;
+    --brand-card:#FFCA28;
+    --brand-text: #0F172A;
+    --brand-text-gray: #475569;
+    --brand-accent:#FFA836;
+    --brand-accent-hover:#F06105;
+  }
+
+  .dark {
+    --brand: #0F172A;
+    --brand-secondary:#484e57;
+    --brand-card:#05D9FF ;
+    --brand-text: #F1F5F9;
+    --brand-text-gray: #94A3B8;
+    --brand-accent:#00BFFF;
+    --brand-accent-hover:#0E81B9;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@theme {
+  --color-background: var(--brand);
+  --color-layout: var(--brand-secondary);
+  --color-brand-card: var(--brand-card);
+  --color-primary: var(--brand-text);
+  --color-primary-gray: var(--brand-text-gray);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-hover: var(--brand-accent-hover);
+}
