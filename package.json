@@ -2,7 +2,7 @@
   "name": "mb_store",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/Sub-mist/Motherboard-Store-Landing-Page.git",
+  "homepage": "https://Sub-mist.github.io/Motherboard-Store-Landing-Page/",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
