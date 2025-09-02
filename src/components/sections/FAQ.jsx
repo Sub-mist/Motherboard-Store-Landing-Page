@@ -42,7 +42,7 @@ const FAQ = () => {
               Have questions? We've got answers. If you can't find what you're looking for, feel free to contact us.
             </p>
             <img
-              src="/images/section-image/FAQ.jpg"
+              src="images/section-image/FAQ.jpg"
               alt="Illustration of people with question marks"
               className="rounded-lg mx-auto md:mx-0"
             />
